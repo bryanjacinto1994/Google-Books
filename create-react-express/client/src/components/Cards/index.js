@@ -1,16 +1,19 @@
-import React from "react"
+import React from "react";
+import "./CharacterStyle.css";
 
-function Cards() {
+function CharacterCards(props) {
     return (
-        <div class="card">
-            <h5 class="card-header">Featured</h5>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div className="card">
+            <div className="img-container">
+                <img alt={props.name} src={props.image} />
             </div>
+            <span onClick={() => { props.guessCharacter(props.id); props.handleIncrement()}} className="guess">
+                x
+            </span>
+
         </div>
-    )
+    );
 }
 
-export default Cards;
+export default CharacterCards;
+
