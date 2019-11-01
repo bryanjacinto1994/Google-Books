@@ -92,14 +92,19 @@ class Home extends Component {
         return (
             <div>
                 <NavBar />
+                <br></br>
                 <Jumbotron />
                 <div className='container'>
                     <Form
                     handleFormSubmit = {this.handleFormSubmit}
                     handleInputChange = {this.handleInputChange} />
+                    <br/>
                     <div className='container-fluid' id='main-content'>
                         {this.state.results.map((book) => {
                             return (
+                                <div className="container">
+                                    <br/>
+                                    <br/>
                                 <Cards
                                     key={book.id}
                                     title={book.volumeInfo.title}
@@ -109,7 +114,7 @@ class Home extends Component {
                                     image={book.volumeInfo.imageLinks.thumbnail}
                                     description={book.volumeInfo.description}
                                     saveBook={this.handleSaveBook}
-                                />
+                                /> </div>
                             )
                         })}
                     </div>
