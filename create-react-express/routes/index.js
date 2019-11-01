@@ -1,14 +1,15 @@
 const path = require('path');
-const apiRoutes = require('./api');
+// const apiRoutes = require('../client/src/utils/api/api');
 const express = require('express');
-const app = express();
+const router = express.Router();
+const apiRoutes = require("./api")
 
-app.use('/api', apiRoutes);
+router.use('/api', apiRoutes);
 
-app.use(function(req, res){
-    res.sendFile(path.join(__dirname, '..client/build/index.html'));
+router.use(function(req, res){
+    res.sendFile(path.join(__dirname, '../client/public/index.html'));
 
 });
 
-module.exports = app;
+module.exports = router;
 

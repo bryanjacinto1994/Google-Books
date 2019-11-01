@@ -1,19 +1,16 @@
 import React from "react";
-import "./JumbotronStyle.css";
 
 function Jumbotron() {
     return (
-        
-        <div className="container">
-            <div className="jumbotron">
-                <h1 className="display-4">Clicky Game</h1>
-                <p className="lead">Click on a character to earn points! However do not choose the same character twice.</p>
-
-            </div>
-        </div>
-        
-    );
+    <div className='jumbotron jumbotron-fluid bg-secondary text-white'>
+        <span className='display-2'>
+            Google Books Search and Find
+        </span>
+        <span className='lead'> 
+            Search for and Save Books of Interest
+        </span>
+    </div>
+    )
 }
 
 export default Jumbotron;
-

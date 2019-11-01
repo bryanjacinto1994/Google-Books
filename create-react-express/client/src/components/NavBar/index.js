@@ -1,26 +1,25 @@
+
 import React from "react";
-// import App from "../../App";
+import { BrowserRouter as Router, Link } from "react-router-dom"
 
-function NavBar() {
-    return (
-        <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-light">
+function Navbar() {
+  return (
+    <div className="container" >
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <p className="navbar-brand">Google Books</p>
 
-                <div>Clicky Game</div>
-
-                <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul className="nav">
-                        <li className="nav-item" >
-                            Score:  |
-                        </li>
-                        <li className="nav-item" >
-                            | Top Score: 
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="/">Search</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/saved">Saved</a>
+            </li>
+          </ul>
         </div>
-    );
+      </nav>
+    </div>)
 }
 
-export default NavBar
+export default Navbar;

@@ -1,20 +1,20 @@
-import React from "react"
-import { PromiseProvider } from "mongoose"
+import React from 'react';
 
-function Form() {
+function Form(props) {
     return (
-        <form>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Example label</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"></input>
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Another label</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-            <button type="submit"  onClick{(i) => PromiseProvider.han}
-                </input>
-            </div>
-        </form>
+        <div id='search-form' className='text-center'>
+            <input className='form-control' name='title'
+                placeholder='Search for a book...'
+                type='text'
+                onChange={props.handleInputChange}></input>
+                <br />
+                <button
+                className='btn btn-block btn-primary'
+                    onClick={props.handleFormSubmit}
+                    type='submit'
+                >Search
+            </button>
+        </div>
     )
 }
 
