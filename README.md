@@ -2,6 +2,9 @@
 
 ### Links: 
 
+Deployed: <br>
+https://googlebooks-bryanjacinto.herokuapp.com/
+<br>
 Github: <br>
 https://github.com/bryanjacinto1994/Google-Books
 
