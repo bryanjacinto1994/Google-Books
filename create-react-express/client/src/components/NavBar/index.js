@@ -13,7 +13,7 @@ const styles = {
 
 function Navbar() {
   return (
-    
+ 
     <div className='container' style={{ textAlign: "center" }}>
       <br></br>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{borderRadius: 20}}>

@@ -91,13 +91,16 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <NavBar />
+               <div className="animated fadeInDown">
+                <NavBar /></div>
                 <br></br>
-                <Jumbotron />
+                <div className="animated jackInTheBox delay-2s">
+                <Jumbotron /></div>
                 <div className='container'>
+                   <div className="animated rollIn delay-3s">
                     <Form
                     handleFormSubmit = {this.handleFormSubmit}
-                    handleInputChange = {this.handleInputChange} />
+                    handleInputChange = {this.handleInputChange} /></div>
                     <br/>
                     <div className='container-fluid' id='main-content'>
                         {this.state.results.map((book) => {
@@ -105,6 +108,7 @@ class Home extends Component {
                                 <div className="container">
                                     <br/>
                                     <br/>
+                                    <div className="animated fadeInUp">
                                 <Cards
                                     key={book.id}
                                     title={book.volumeInfo.title}
@@ -114,7 +118,9 @@ class Home extends Component {
                                     image={book.volumeInfo.imageLinks.thumbnail}
                                     description={book.volumeInfo.description}
                                     saveBook={this.handleSaveBook}
-                                /> </div>
+                                />
+                                </div>
+                                 </div>
                             )
                         })}
                     </div>
